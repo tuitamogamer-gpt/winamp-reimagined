@@ -35,3 +35,11 @@ All built-in sounds and cover graphics were created for this concept. The demons
 - `dist/audio-engine.js`: Web Audio playback and offline demo synthesis
 - `dist/library-store.js`: browser-local audio storage
 - `dist/assets/`: original artwork and favicon
+
+## Vercel deployment
+
+The repository root contains `vercel.json` for a static deployment. Vercel serves `dist/` with no install or build step. Link the repository to Vercel using the project root and framework preset **Other**; pushes to the production branch deploy automatically.
+
+For an authenticated, linked Vercel CLI checkout, run `vercel deploy --prod` from the repository root. The `.vercel/` local project link is intentionally ignored by Git.
+
+Browser-local libraries are scoped to each domain. A new deployment domain starts with an empty uploaded library; original audio files can be imported there.
