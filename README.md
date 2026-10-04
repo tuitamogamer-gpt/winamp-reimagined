@@ -18,6 +18,10 @@ Open http://localhost:3000. Serve over HTTP rather than opening `index.html` dir
 - Ten-band Web Audio equalizer with five presets and custom gain controls.
 - Live audio spectrum and waveform, with reduced-motion support.
 - Search, favorites, recent listening, custom playlists and playback queue.
+- Three persistent color skins: Original Lime, Amber and Arctic, including matching visualizers.
+- Embedded title, artist, album, genre, year and cover art from ID3-tagged MP3 and native FLAC files; filename fallbacks for other formats.
+- Editable playlist names and descriptions, with playlist deletion that preserves the library and current playback.
+- An editable upcoming queue with play next, move up/down, remove and clear controls. Shuffle follows the visible queue and remembers its setting.
 - Refined desktop and mobile layouts, touch-friendly transport and seek controls, collapsible equalizer, focus mode, keyboard shortcuts and Media Session controls.
 - Seek preview on drag, with playback seeking committed on release.
 - Keyboard focus management for track controls, menus, navigation and playback queue.
@@ -34,6 +38,9 @@ All built-in sounds and cover graphics were created for this concept. The demons
 - `dist/app.js`: application state and UI
 - `dist/audio-engine.js`: Web Audio playback and offline demo synthesis
 - `dist/library-store.js`: browser-local audio storage
+- `dist/audio-metadata.js`: bounded, offline ID3 and FLAC metadata parsing
+- `dist/skins.js` and `dist/skins.css`: persistent themes and the accessible skin picker
+- `dist/library-controls.css`: imported artwork and playback queue styles
 - `dist/assets/`: original artwork and favicon
 
 ## Vercel deployment

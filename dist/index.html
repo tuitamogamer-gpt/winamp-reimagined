@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="refinements.css">
+  <link rel="stylesheet" href="skins.css">
+  <link rel="stylesheet" href="library-controls.css">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Preskoči na player</a>
@@ -29,13 +31,13 @@
     <div class="sidebar-bottom">
       <div class="local-note"><div class="local-note-icon"><i data-icon="folder"></i></div><strong>Tvoja muzika. Tvoja pravila.</strong><p>Dodaj svoje pjesme i pronađi svoj ritam.</p><button id="sidebar-import">Dodaj muziku <i data-icon="arrow-up-right"></i></button></div>
       <button class="settings-button" id="settings-open"><i data-icon="sliders"></i><span>Postavke</span><span class="keycap">⌘ ,</span></button>
-      <div class="version"><span class="status-dot"></span> ALL GOOD. ALL YOURS.<span>v. 2.0</span></div>
+      <div class="version"><span class="status-dot"></span> ALL GOOD. ALL YOURS.<span>v. 3.0</span></div>
     </div>
   </aside>
   <div class="workspace">
     <header class="topbar">
       <div class="topbar-left"><button class="icon-button mobile-menu" id="menu-toggle" aria-label="Otvori navigaciju"><i data-icon="menu"></i></button><span class="breadcrumb">Tvoj prostor</span><span class="slash">/</span><span id="breadcrumb-current">Player</span></div>
-      <div class="topbar-right"><button class="topbar-sound icon-button" id="quick-sound" aria-label="Glasnoća i kontrole"><i data-icon="volume"></i></button><span class="local-badge"><span class="status-dot"></span>100% tvoj zvuk</span><button class="icon-button" id="shortcuts-open" aria-label="Tipkovnički prečaci" title="Tipkovnički prečaci"><i data-icon="keyboard"></i></button><button class="avatar" id="profile-open" aria-label="O aplikaciji">W</button></div>
+      <div class="topbar-right"><button id="skin-toggle" type="button" aria-label="Odaberi skin"></button><button class="topbar-sound icon-button" id="quick-sound" aria-label="Glasnoća i kontrole"><i data-icon="volume"></i></button><span class="local-badge"><span class="status-dot"></span>100% tvoj zvuk</span><button class="icon-button" id="shortcuts-open" aria-label="Tipkovnički prečaci" title="Tipkovnički prečaci"><i data-icon="keyboard"></i></button><button class="avatar" id="profile-open" aria-label="O aplikaciji">W</button></div>
     </header>
     <main id="main-content" tabindex="-1">
       <section class="page-heading"><div><div class="eyebrow">STARI DOBRI OSJEĆAJ. NOVA FREKVENCIJA.</div><h1 id="page-title">Tvoj zvuk. Bez granica<span>.</span></h1><p id="page-description">Pritisni play. Isključi ostatak svijeta.</p></div><button class="primary-button" id="add-music" aria-label="Dodaj muziku"><i data-icon="plus"></i>Dodaj muziku</button></section>
@@ -59,7 +61,7 @@
 <div id="drop-overlay" class="drop-overlay" hidden><i data-icon="upload"></i><h2>Pusti svoj zvuk ovdje.</h2><p>MP3, WAV, FLAC, OGG i još mnogo toga.</p></div>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <button class="queue-backdrop" id="queue-backdrop" aria-label="Zatvori red reprodukcije" hidden></button>
-<aside class="queue-drawer" id="queue-drawer" role="dialog" aria-label="Red reprodukcije" hidden><div class="drawer-heading"><h2>Slijedi u redu</h2><button class="icon-button" id="queue-close" aria-label="Zatvori red"><i data-icon="x"></i></button></div><p class="muted" id="queue-description">Tvoja sljedeća frekvencija.</p><div id="queue-list"></div></aside>
+<aside class="queue-drawer" id="queue-drawer" role="dialog" aria-label="Red reprodukcije" hidden><div class="drawer-heading"><h2>Slijedi u redu</h2><button class="icon-button" id="queue-close" aria-label="Zatvori red"><i data-icon="x"></i></button></div><div id="queue-current"></div><div class="queue-upcoming-heading"><p class="muted" id="queue-description">Tvoja sljedeća frekvencija.</p><button class="text-button" id="queue-clear">Očisti red</button></div><span id="queue-announcement" class="sr-only" role="status" aria-live="polite"></span><div id="queue-list"></div></aside>
 <div id="context-menu" class="context-menu" role="menu" hidden></div>
 <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
 <script type="module" src="app.js"></script>

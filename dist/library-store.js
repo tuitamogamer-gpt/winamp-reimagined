@@ -68,7 +68,7 @@ async function transact(mode, operation) {
 export const libraryStore = {
   list: () => transact('readonly', store => store.getAll()),
   save: (track, file) => {
-    const { src, persisted, ...metadata } = track;
+    const { src, artworkUrl, persisted, ...metadata } = track;
     return transact('readwrite', store => store.put({ ...metadata, file }));
   },
   remove: id => transact('readwrite', store => store.delete(id))
